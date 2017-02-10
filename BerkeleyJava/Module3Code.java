@@ -1,3 +1,9 @@
+/*
+Write a recursive function that reverses a String. A recursive function (as
+defined in the commentary) is a function that calls itself. The function should
+return a String and take only one argument, also a String.
+*/
+
 import java.io.*;
 
 

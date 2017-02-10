@@ -1,5 +1,21 @@
-import java.util.*;
+/*
+Use the collections framework and generic types to create a bowling score
+tracker collection. Design a data structure that will be used as elements in a
+collection. Each element should contain a unique name of the bowler and a list
+of scores and dates of the games they have played.
 
+Then print to the screen each:
+
+Bowler name
+Number of games
+Average score of all of the games
+Score of their last game
+Date of their last game
+
+Provide test cases to prove your collection works.
+*/
+
+import java.util.*;
 
 public class ScoreKeeper {
 
@@ -9,7 +25,7 @@ public class ScoreKeeper {
     playerScores = new TreeMap<>();
   }
 
-  private void addScore(String name, String date, int score) {
+  public void addScore(String name, String date, int score) {
     TreeMap<String, Integer> scores;
     scores = (playerScores.containsKey(name) ?
         playerScores.get(name) : new TreeMap<>());
@@ -43,6 +59,15 @@ public class ScoreKeeper {
         playerScores.get(name).get(lastDate(name)) : null);
   }
 
+  public void showResults() {
+    for (String name : playerScores.keySet()) {
+      System.out.printf("Player: %s, Number of games: %d, Average score: %.1f, Last score: %d, Last game: %s",
+          name, gameCount(name), averageScore(name),
+          lastScore(name), lastDate(name));
+      System.out.println();
+    }
+  }
+
   public static void main(String args[]) {
     ScoreKeeper scoreKeeper = new ScoreKeeper();
     scoreKeeper.addScore("john", "2016-01-01", 80);
@@ -50,11 +75,6 @@ public class ScoreKeeper {
     scoreKeeper.addScore("john", "2016-03-01", 75);
     scoreKeeper.addScore("michael", "2016-02-01", 90);
 
-    for (String name : scoreKeeper.playerScores.keySet()) {
-      System.out.printf("Player: %s, Number of games: %d, Average score: %.1f, Last score: %d, Last game: %s",
-          name, scoreKeeper.gameCount(name), scoreKeeper.averageScore(name),
-          scoreKeeper.lastScore(name), scoreKeeper.lastDate(name));
-      System.out.println();
-    }
+    scoreKeeper.showResults();
   }
 }
