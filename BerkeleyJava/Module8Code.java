@@ -11,7 +11,6 @@ import java.net.*;
 import java.io.*;
 import java.util.*;
 
-
 public class Module8Code {
 
   public static void displayContent(String fileName, int contentLength) throws IOException {

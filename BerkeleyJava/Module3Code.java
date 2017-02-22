@@ -6,7 +6,6 @@ return a String and take only one argument, also a String.
 
 import java.io.*;
 
-
 public class Module3Code {
   
   public static String reverse(String text) {

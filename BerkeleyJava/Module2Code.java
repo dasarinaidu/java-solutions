@@ -7,7 +7,6 @@ sorting algorithm with which you are familiar, and print them to the console.
 
 import java.io.*;
 
-
 public class Module2Code {
 
   public static void main(String[] argv) throws IOException {

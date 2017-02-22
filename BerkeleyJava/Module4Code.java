@@ -11,7 +11,6 @@ Next, write an application that instantiates at least two cash register objects
 to prove that your class works.
 */
 
-
 public class Register {
 
   private int numberTransactions;

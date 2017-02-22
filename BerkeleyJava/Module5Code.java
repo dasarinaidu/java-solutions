@@ -22,7 +22,6 @@ particular, it should be possible to create multiple independent ParkingGarages
 in one program.
 */
 
-
 public class Module5Code {
 
   // SaturnSL1 sl = new SaturnSL1();          // Compile OK, Run OK
